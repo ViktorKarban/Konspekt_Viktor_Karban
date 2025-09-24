@@ -1,131 +1,404 @@
 ﻿using System.ComponentModel.Design;
 
-namespace Minu_konspekt
+namespace MINUKONSPEKT_NK
 {
-    internal class Program
+internal class Program
     {
         static void Main(string[] args)
-        {
-            // Console.WriteLine("Hello, World!");
 
-            // Muutujad, Matematilised tehted, IF, ELSE IF ja ELSE
-            Console.WriteLine("Tere kasutaja, mis on sinu nimi");
+
+        {
+
+
+            //Console.WriteLine("Hello, World!");
+
+            //Muutujad, Matemaakilised tehted, IF, ELSE IF ja ELSE:
+
+            //1. tusun njo921 2088wg
+
+            Console.WriteLine("Tere kasutaja, mis on sunu nimi");
+
             string nimi = Console.ReadLine();
 
-            if (nimi != "") 
+            if (nimi == "")
+
             {
-                Console.WriteLine("Kasutaja ei sisetanud oma nime");
+
+                Console.WriteLine("Kasutaja ei sisestanud oma nime");
+
             }
             else if (nimi != "")
+
             {
-                Console.WriteLine("Tere" + nimi + "!");
+
+                Console.WriteLine("Tere " + nimi + "!");
+
             }
 
             else
+
             {
-                Console.WriteLine("Kadutada ei sisestanud oma nime");
+
+                Console.WriteLine("Kasutaja ei sisestanud oma nime");
+
+
             }
+
+
+
+
+
+            //2. tuvasta jsiugjs salam salam slama ///double/floart andmememrut
+
+
             Console.WriteLine(nimi + ", mis on sinu vanus?: ");
+
+
             int kasutajavanus = int.Parse(Console.ReadLine());
-            //if (kasutajavanus > 0)
+
+
+            //2.1 831246328HFDWUSI
+
+
+            //if (kasutajavanus > 0 )
+
+
             //{
+
+
             //    if (kasutajavanus < 18)
-            //    { 
-            //        Console.WriteLine("Kahjuks energiajookisulle ei müüda, oled Monsterist ilma") ;
-            //     }
-            //    else
+
+
             //    {
-            //        Console.WriteLine("Saad monsteri, yippie");
+
+
+            //        Console.WriteLine("Kahjuks emergijoki sulle ei muuda. oled pivasik ilma 🤣👍😂🧐");
+
+
             //    }
+
+
+            //    else
+
+
+            //    {
+
+
+            //        Console.WriteLine("saad osta pivasik salam💎💎💎🛠️🛠️🛠️🛠️");
+
+
+            //    }
+
+
             if (kasutajavanus > 0 && kasutajavanus < 18)
+
+
             {
-                Console.WriteLine("Kahjuks energiajooki sulle ei müüda, oled monsteri ilma");
+
+
+                Console.WriteLine("Kahjuks emergijoki sulle ei muuda. oled pivasik ilma 🤣👍😂🧐");
+
+
             }
-                else
+
+
+            else
+
+
             {
-                Console.WriteLine("saad osta Monsteri YIPPIE");
+
+
+                Console.WriteLine("saad osta pivasik salam💎💎💎🛠️🛠️🛠️🛠️");
+
+
             }
-            Console.WriteLine("Sisesta oma pikkus ka palun" + nimi + ":");
+
+
+            Console.WriteLine("Sisesta oma pikkus ka, palun, " + nimi + ":");
+
+
             double pikkus = double.Parse(Console.ReadLine());
-            if (pikkus < 1.00d )
+
+
+            if (pikkus < 1.00d)
+
+
             {
-                Console.WriteLine("oled jutun");
+
+
+                Console.WriteLine("Oldes juntsu");
+
+
             }
+
+
             else if (pikkus < 1.25d && pikkus > 1.00d)
-                {
-                Console.WriteLine("Oled praegu allameetrimees");
-                }
-            else if (pikkus < 1.50d && pikkus > 1.25)
+
+
             {
-                Console.WriteLine("Otsi paka pikk enae e olegi");
+
+
+                Console.WriteLine("Oled peaaegu allameetrimees");
+
+
             }
-            else if (pikkus < 1.75d && pikkus >1.50)
+
+
+            else if (pikkus < 1.50d && pikkus > 1.25d)
+
+
             {
-                Console.WriteLine("Oled enamasti standart pikkuses, kui mitte just natuke lühike");
+
+
+                Console.WriteLine("Oiosi pakapikk enam e olegi " + nimi + "!");
+
+
             }
-            else if (pikkus < 2.00d && pikkus > 1.75)
+
+
+            else if (pikkus < 1.75d && pikkus > 1.5d)
+
+
             {
-                Console.WriteLine("Pikk koge vaata et sa pead vastu uksewpita ara ei töö");
+
+
+                Console.WriteLine("Mne len pisat etu huynu");
+
+
             }
-            else if (pikkus < 2.00d)
+
+
+            else if (pikkus < 2.00d && pikkus > 1.75d)
+
+
             {
-                Console.WriteLine("you so tall");
+
+
+                Console.WriteLine("Pikk kolge vaata et sa pead vastu uksewpita ara ei löö.");
+
+
             }
+
+
+            else if (pikkus > 2.00d)
+
+
+            {
+
+
+                Console.WriteLine("yu so tall hello");
+
+
+            }
+
+
+            else
+
+
+            {
+
+
+                Console.WriteLine("pikkust ei tunta");
+
+
+
+
+
+            }
+
+
+            Console.WriteLine("Tere. Sisesta esimene arv");
+
+
+            int arv1 = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Tere. Sisesta teine arv");
+
+
+            int arv2 = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("sisesta tehtemärk: / * + - ");
+
+
+            string tehtetyyp = Console.ReadLine();
+
+
+
+
+
+            int tulemus = 0;
+
+
+            if (tehtetyyp == "+")
+
+
+            {
+
+
+                tulemus = arv1 + arv2;
+
+
+            }
+
+
+            else if (tehtetyyp == "-")
+
+
+            {
+
+
+                tulemus = arv1 - arv2;
+
+
+            }
+
+
+            else if (tehtetyyp == "/")
+
+
+            {
+
+
+                tulemus = arv1 / arv2;
+
+
+            }
+
+
+            else if (tehtetyyp == "*")
+
+
+            {
+
+
+                tulemus = arv1 * arv2;
+
+
+            }
+
+
+            else if (tehtetyyp == "^")
+
+
+            {
+
+
+                tulemus = (int)Math.Pow(arv1, arv2);
+
+
+            }
+
+
+            else
+
+
+            {
+
+
+                Console.WriteLine("Palun sisesta tehe, mida kalkulaator tuvastada oskab");
+
+
+            }
+
+
+
+
+
+            if (tulemus != 0)
+
+
+            {
+
+
+                Console.WriteLine(tulemus);
+
+
+            }
+
+
+            else
+
+
+            {
+
+
+                Console.WriteLine("Tulemus on 0, või üritasid teha tehet, mida kalkulaator ei tunne");
+
+
+            }
+
+
+
+
+
+            Console.WriteLine("Kas sa tahad õuna või banaani?");
+
+
+            string vastus = Console.ReadLine();
+
+
+            if (vastus == "õuna")
+
+
+            {
+
+
+                Console.WriteLine("õuna panul: 🍏🍎");
+
+
+            }
+
+
+            else if (vastus == "banaani")
+
+
+            {
+
+
+                Console.WriteLine("banaan palun: 🍌🍌🍌🍌🍌🍌");
+
+
+            }
+
+
+            else
+
+
+            {
+
+                Console.WriteLine("Sellist puuvilja ma ei tunne");
+
+
+            }
+            //4 parool, if ja string admetüüp
+            Console.WriteLine("Programi edasiseks tööks sisesta palun parool:");
+            string password = Console.ReadLine();
+            if (password == "simsalabin")
+            {
+                Console.WriteLine("Parool on õige, aarete laegas avaneb");
+            }
+            else if (password == "qwerty" || password == "6778")
+                    {
+                Console.WriteLine("Pasword palun");
+                    }
             else
             {
-                Console.WriteLine("pikkust ei tunta");
+                Console.WriteLine("Eror parol");
+                    // värvituvas 
+                    Console.WriteLine("Milline värv sulle kõige rohkem meldib?:");
+                string favouriteColour = Console.ReadLine(); 
+                if(favouriteColour == "punane")
+                { }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+            
 
         }
-        
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-           
     }
+
+
 }
-      
