@@ -393,6 +393,7 @@ internal class Program
                 { }
             }
             }
+
             
 
         }
@@ -401,11 +402,11 @@ internal class Program
     }
 
 
-}
-*/
-using System.Net.NetworkInformation;
+}*/
 
-Console.WriteLine("hapukapsas");
+
+
+//Console.WriteLine("hapukapsas");
 //Console    -> on modul (C# mida me adressime, Console aitab teha teguvusi käserual
 // .         -> näitab, et meil on vaja adressida mingisugust  funktsiooni või metodit
 //              moduli "Console" sest
@@ -418,23 +419,23 @@ Console.WriteLine("hapukapsas");
 //            -> kõik kodilaused lõppevad komakooloniga, mis tähistavad lause lõppu 
 //            ->tähistab üheralis kommentari
 // /**/       ->tähistab mimeralist materialit kommentari või kommentariregioni
-int muutuja = 3;
+//int muutuja = 3;
 // int       -> on muutuja nime ees olev andetüübi kirjeldus mis näitab ära, millist tüüpi andmed selle mutuja sees on.
 //           -> sõnaga, ja mille abil saab neid addresirida koodi sees
 // =         -> üksuk võrdusmärk omistab muutuja sisse vastava väärtuse mis asub teisepool võrdusmärki
 // 3         -> muutujale omistatav väärtus.
 // Võimalikud andmetübid mida vaja võib minna 
-int a = 1; // int on täisarv
-decimal b = 2.1M; // decimal on kümebdsüstemis olev komakohaga arv
-float c = 3.9f; // float on 32-bittine komakohaga arv
-double d = 5.6d; //double on 64-bitine komakohaga arv
-char c1 = 'a'; // üksainus täht või tähemark
-var y = 123; //ta võib omada endas teisti admetüüpe 
-const int z = 9; // konstant tüüpi mujutad ei saa parandada 
+//int a = 1; // int on täisarv
+//decimal b = 2.1M; // decimal on kümebdsüstemis olev komakohaga arv
+//float c = 3.9f; // float on 32-bittine komakohaga arv
+//double d = 5.6d; //double on 64-bitine komakohaga arv
+//char c1 = 'a'; // üksainus täht või tähemark
+//var y = 123; //ta võib omada endas teisti admetüüpe 
+//const int z = 9; // konstant tüüpi mujutad ei saa parandada 
 
-// mutuja nimed 
-int arv = 0; //sobib
-string sõne = "abc"; //sobib 
+//// mutuja nimed 
+//int arv = 0; //sobib
+//string sõne = "abc"; //sobib 
                      //string string = "abc"; // kaitsud sõna kasutada ei saa
 
 // muutuja nieks ei sobi järgnevad sõnad:
@@ -566,4 +567,115 @@ Console.WriteLine(tulemus);
 //tehte tulemus. Selle jaoks on WriteLine funktsioonis parameetrina pandud muutuja
 //"tulemus" ilma tekstiks teisendamata. Lause lõppeb lauselõpumärgiga "".
 
+if (true) { }
+//kaitstud sõna "if" kutsub esile tingimuslause, mille tingimus on sulgude vahel, ning millele järgneb
+//koodiplokk tingimuse täitumisel teostatava koodiga
+else if (true) { }
+//kaitstud sõnad "else" ja "if" (else if) kutsuvad esile sekundaarse tingimuslause, mille tingimus 
+//on samamoodi sulgude vahel, ning millele pepab eelnema alat kas "If" või teine "else if". Tingimuse täitumisel
+//ja eelneva tingimuse mittetäitumisel, teostatakse koodiploki sees olev kood.
+else { } //kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas "if" või "else if", ning mille koodiploki sisu
+         //täidetakse kõikide teiste "if" ja "else if" tingimuste Läbikulumisel.
 
+/* Logilised tehtd  */
+
+//&& -> "and" loogiline tehe, mida kasutatakse tingimuste kirjeldamisel, ning mis annab positiivse vastuse /(true) juhul lui
+//mõlemal poll "&&" märki olevad tingimused on täidetud. Kui üks neist ei ole, siis annab negatiivse vastuse (false).
+// || "or"! loogiline tege, mida kasutatakse tingimuste kirjeldamisel, ning mis annab positiivse vastuse (true) siis kui
+// vähemalt üks tingimus on täidetud. Negatiivne vastus (false) tagastatakse siis, kui kõik tingimused on täitmata.
+//->"not" loogiline tehe, mida kasutatakse tingimuse tulemuse inverteerimiseks. Tulemus, mis muidu tagastaks (true),
+//hüüumärgi abil tagastab (false), ja vastupidi tulemus mis muidu tagastaks (false), hüüumärgi abil tagastab (true)
+
+/*  Võrdluseoperaatorid   */
+//  ==>   "on võrdne".Võrdusmärkide ühel pool olev objekt peab vastama täpselt oma olemuselt võrdusmärkide teise pool oleva
+//        objektiga. ei ole sama nagu üks võrdusmärk, üks võrdusmärk omistab, kaks võrdleb.
+// != -> "ei ole võrdne". Võrdusmärgi ühel pool olev objekt EI TOHI olla samal kujul nagu võrdusmärgi teisel pool olev objekt.
+//        Ta võib olla ükskõik mis muul kujul, aga mitte võrreldava objektiga samal kujul.
+//        "on võrdne operaatorist, ja loogilisest tehtest "not".
+//   > -> "on suuren kui". Märgist vasakul pool olev objekt peaks olema suuren, kui paremal pool olev objekt.
+//   < -> "on väiksem kui". Märgist vasakul pool olev objekt peaks olema väiksem, kui paremal pool olev objekt.
+//   >= -> "suurenvõrdne". Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või suurem kui parempoolne objekt.
+//         Võrluseoperator on kombinatsion  " on võrdne" ja "on suurem, kui " operatoriesr
+//   <= -> "väiksemvõrdne".Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või väiksem kuiparempoolne objekt.
+//          Võrdlusoperaator on kombinatsioon "on võrdane" ja "on väiksem kui operatoritest"
+
+int thing = 1;     //üksik võrdusmärk omistab muutuja sisse väärtuse, mida saab kasutada läbi muutuja nime.
+thing += 1;       //+->võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu.
+                 //-->asendab tehet "thing = thing + 1". on kombinatsioon matemaatilisest tehtest "+" ja omistamisest "=".
+thing = 1;      //võrdusmärk mille ees on miinus, automaatselt lauhtab muutujast maha võrdusmärgi teisel pool oleva arvu.
+                //asendab tehet "thing = thing 1". on kombinatsioon matemaatilisest tehtest "-" ja omistamisest "="
+thing *= 2;     // =->võrdusmärk mille ees on korrutusmärk "", automaatselt korrutab muutuja sisu, võrdusmärgi teisel pool oleva arvu kordi. asendab tehet "thing thing 2". on kombinatsioon matemaatilisest tehtest "*" ja
+                //omistamisest "=".
+thing /= 2;      // /= -> võrdusmärk mille ees on jagamismärk "/", automaatselt jagab muutuja sisu võrdusmärgi teisel pool oleva
+                 // arvu osadeks. asendab tehet "thing = thing / 2" on kombinatsioon matemaatilisest tehtest "/" ja
+                 //omistamisest "=".
+thing++;         // ++ -> on spetsifiliselt ühe juurde liitmiseks kiitehe.
+thing--;         // -- -> on spetsiifiliselt ühe maha lahutamiseks kiirtehe.
+
+/* Tsüklid */
+// 1. do-while
+do // "do" on kaitstud sõna, mis alustab do-while tsüklit. Pärst seda on koodiplokk {} ning ütleb et tee seda koodi
+{
+}
+while (true); //niikaua kuni while järel olevate sulgude vahel tingimus ei täitu, käivitatakse eelnev kood uuesti.
+
+
+Console.WriteLine("Sisesta osumma");
+double ostusumma = double.Parse(Console.ReadLine());
+if (ostusumma > 100) 
+{
+    Console.WriteLine("SAAD 20% ALLAHINDLUST!!!!!!!!!OMG!!!");
+}
+else if (ostusumma < 101 && ostusumma > 50)
+{
+    Console.WriteLine("Saad 10% allahindlust. c: yay");
+}
+else if (ostusumma < 51 && ostusumma > 20)
+{
+    Console.WriteLine("5% allahindlust.");
+}
+else if (ostusumma < 21 && ostusumma > 0)
+{
+    Console.WriteLine("allahindlust ei saa");
+}
+else
+{
+    Console.WriteLine("sisestatud on vigane arv");
+}
+
+//string kasutajaNimi = "";
+//do
+//{
+//    Console.WriteLine("Palun sisesta oma kasutajanimi");
+//    kasutajaNimi = Console.ReadLine();
+//} while (kasutajaNimi != "user1");
+//if (kasutajaNimi == "user1")
+//{
+//    int ruuduSuurus = 0;
+
+//    do
+//    {
+//        Console.WriteLine("Kui suut ruutu saada tahad?");
+//        ruuduSuurus = int.Parse(Console.ReadLine());
+//    } while (ruuduSuurus < 0 || ruuduSuurus > 20);
+
+
+//    char reaKujund = '▓';
+//    string üksRida = "";
+//    int tsükliMuutuja = ruuduSuurus;
+
+//    do
+//    {
+//        üksRida = üksRida + "_" + reaKujund;
+//        tsükliMuutuja = tsükliMuutuja - 1;
+//    } while (tsükliMuutuja != 0);
+
+//    tsükliMuutuja = ruuduSuurus;
+
+//    do
+//    {
+//        Console.WriteLine(üksRida);
+//        tsükliMuutuja -= 1;
+//    } while (tsükliMuutuja != 0);
+//    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruuduSuurus}x{ruuduSuurus}");
+//}
