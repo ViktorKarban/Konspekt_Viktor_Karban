@@ -436,7 +436,7 @@ internal class Program
 //// mutuja nimed 
 //int arv = 0; //sobib
 //string sõne = "abc"; //sobib 
-                     //string string = "abc"; // kaitsud sõna kasutada ei saa
+//string string = "abc"; // kaitsud sõna kasutada ei saa
 
 // muutuja nieks ei sobi järgnevad sõnad:
 // abstract, as, base, bool, break, byte,case,
@@ -453,6 +453,8 @@ internal class Program
 
 
 //3 kalkulaator ifi ja elsifidega
+using System.Net.NetworkInformation;
+
 Console.WriteLine("Tere. Sisesta esimene arv");
 //Adresserime moodulit "Console", punkti abil ütleme, et kasutame funktsiooni WriteLine
 //selle jaoks et öelda kasutajale sõnum mis asub funktsiooni nime järel sulgude vahel
@@ -576,6 +578,36 @@ else if (true) { }
 //ja eelneva tingimuse mittetäitumisel, teostatakse koodiploki sees olev kood.
 else { } //kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas "if" või "else if", ning mille koodiploki sisu
          //täidetakse kõikide teiste "if" ja "else if" tingimuste Läbikulumisel.
+int option = 3; // -----
+switch (option)//"swith" on kaitstud sõna alternatiivse tingimuskontrolli jaoks mida saab ef else-if asemel kasutada.
+//Sulgude vahele käib muutuja nimi, mille põhjal tingimuslik ümberlülitus toimub. Siin sulgude vahel
+//ei ole tingimus ise, vaid kõigest kontrollitav muutuja, või omakorda sulgude vahel muu tingimus.
+//pärast lülitusvalikut tuleb koodiplokk.
+
+
+{
+    case 1:           //koodiploki sees on erinevad juhtumid, juhtumit sätestatakse kaitsud sõna "case" abil. antud juhul kontrollitakse,
+                      //kas muutujas "option" on väärtus 1, millele järgned koolon ":" väljendades tingimuse täitumisel tehtava
+                      //kooditegevuse algust
+                      //Kui tegevis on tehtud, väljutakse mitte ainult juhtumist vaid kogu käesoleva case-tingimustikust kaitstud
+        break;        //sõnaga "break". Peale breaki on läuselõpumärk ";
+        case 2:       //Juhtumeid võib mitmeid, antud juhul on neid kolm kindlat.
+           break;
+    case 3:
+        Console.WriteLine(option); //tehtav kooditegevus.
+        break;
+    default:         //Default juhtumit täidetakse siis, kui ülejäänud juhtumid ei kirjelda muutujas "option" olevat seisu.
+        break;       //Ka default lõppeb sõnaga break.
+
+
+        /* sõne tööristad ja muud teksiga seotut */
+        string alfa = "a\nb";        // \n -> tekitab ühe sõne sisse reamurde, sõne kus on sees üks "\n", omab kahte rida.
+        string beta = $"a {alfa} b"; // $-> lubab kasutada muutjaid loogeliste sulgudega otse teksti sees. On variant
+                                     //     formateeritud stringist.
+
+
+
+}
 
 /* Logilised tehtd  */
 
@@ -618,6 +650,18 @@ do // "do" on kaitstud sõna, mis alustab do-while tsüklit. Pärst seda on kood
 {
 }
 while (true); //niikaua kuni while järel olevate sulgude vahel tingimus ei täitu, käivitatakse eelnev kood uuesti.
+//2. while
+int i = 1;   // tsüklimutuja mis aitab järge pidada while tsükli toitmisel
+while (i < 5) // "while" on kaitsud sõna mis alustab while tsükli varianti, ilma "do"- ta, ning vajab alati välist
+{
+}
+//tsüklimuutujat. antud juhul on selleks i. Tsükli tingimus, mis peale "while" sõna on, asub sulgude vahel,
+//siin kontrollitaksegi tsükli tööd, läbi kindla tingimuse kasutades tsüklimuutujat.
+// antud juhul tsükkel töötab niikaua,kion jäiksem kui 5. kui i on sama suur nagu 5, siis tsükkel
+//katkeb.
+
+//koodiplokk kus midagi tehakse
+i++; // ning seejärel muudetakse tsüklimuutuja "i" olekut. antud juhul liidetakse 1 juurde kiirtehtega "++".
 
 
 Console.WriteLine("Sisesta osumma");
