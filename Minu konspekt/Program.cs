@@ -453,6 +453,7 @@ internal class Program
 
 
 //3 kalkulaator ifi ja elsifidega
+using System;
 using System.Net.NetworkInformation;
 
 Console.WriteLine("Tere. Sisesta esimene arv");
@@ -723,3 +724,48 @@ else
 //    } while (tsükliMuutuja != 0);
 //    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruuduSuurus}x{ruuduSuurus}");
 //}
+
+/* Võimalikud andmetüübid mida vaja võib minna: */
+int  a = 1;             // int on täisarv
+decimal b = 2.1M;       // decimal on kümnendsüsteemis olev komakohaga arv
+float c = 3.9f;         // float on 32-bitine komakohaga arv
+double d = 5.6d;        // double on 64-bitine komakohaga arv
+char c1= 'a';           // üksainus täht või tähemärk mis tähistatakse ülakomadga
+string s = "tekst";     //tähtedest koosnev sõna või tekst, tähistatakse jutumärkidega
+var x = "abc";          //var on ebamäärase andmetüübiga kohalik muutuja
+var y = 123;            //ta võib omada endas teisi andmetüüpe
+const int z = 9;        // konstant-tüüpi muutujaid ei saa muuta, nende sisu on read-only
+
+
+/*Võimalikud komposiitandmetüübid */
+//1. massiiv:
+//[]  Massiiv on komposiitandmetüüp, mille sees saab olla mitmeid samat tüüpi lihtandmeid. Massiivi tähistatakse kant.sulgudega.
+//    Massive saab olla ükskõik millist lihtandmetüüpi massiive.
+//    Massiivi tekitamisel tuleb ära õelda kui pikk või kui suur see massiiv on.
+//    Massiiv ei pea olema koostatud ainult Lihtandmetüüpidest, vaid massiive saab olla ka tehtud teistest komposiitandmetüüpidest
+//    Sealhulgas massiiv ise.
+// Esimene tekitusviis:
+int[] arvuMassiiv = new int[3]; // andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et ühtlasi on 
+                                // tegu ka massiiviga. muutuja nimeks on "arvulassiiv" ja võrdusmärgi abil on omistatud muutujasse
+                                //uus tühi massiiv kasutades kaitstud sõna "new", millele järgneb selle massiivi andmetüübi ja
+                                // pikkuse sätestus "int[3]". See tähendab et siin massiivis on 3 elementi, mis on täisarvud.
+                                //teine tekitusviisint
+int[] arvuMassive2 = [1, 2, 3];// teine massiivi tekitusviis kus järjendi pikkuse sätestamise asemel, pannakse elemendid kohe
+                               // järjendit omava muutuja sisse, järjendi pikkust sätestama ei pea, kuna pikkuse tuletab kompilaator
+                               // sinna sisse pandud elementide koguse järgi.
+                               //------massivi sisemised meetodi tehted 
+int hasThisMany = arvuMassiiv.Length; // massiivi meetod "Length" mille me saame kasutusele võtta punkti abil, loendab kokku 
+                                      // mitu elementi, adresseeritav massiiv omab, omistatakse ainult järjendi pikkus, mitte 
+                                      // järjendi sees olevaid elemente.
+                                      //3. For 
+int kogus = 6; // muutja mida tsükel kasutab oma töö tegemiseks - tesisõnu, töödelvad materjal
+for (int k = 0; k < kogus; k++);   // kaitstud sõnaa "for" alustab for-tsüklit, pärast mida on sulud, mille vahel on kõik tsükli
+                                   // töö jaoks vajalik olemas. Esimene parameeter, tekitab tsükli töö jaoks kohaliku muutuja
+                                   //"int k = 0; mida tsükli ENDA töö juhtimiseks. Teine parameeter on tingimuslause, mis kontrollib
+                                   // tingimuse täitumist "k < kogus; ning mille täitumisel tsükli töö jätkub, aga mille
+                                   // mitte-täitumisel tsükkel katkeb. Kolmas parameeter on
+                                   // "k++", Pane tähele, et iga sulgude vahel oleva osa järel (välja arvatud viimase) on 
+                                   // lauselõpumärk. Tsükli tööd kontrolliv tingimuslause koosneb kolmest reast, mitte ühest 
+                                   // nagu "while" või "do-while puhul.
+Console.WriteLine(0);               // sulgudele järgneb, loogeliste sulgude vahel ole koodiplokk ()
+                                   // töötlustegevus tsükli sees, on muutuja "k" hetkearvu väljakuvamine.
