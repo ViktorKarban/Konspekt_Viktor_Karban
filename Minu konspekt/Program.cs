@@ -769,3 +769,33 @@ for (int k = 0; k < kogus; k++);   // kaitstud sõnaa "for" alustab for-tsüklit
                                    // nagu "while" või "do-while puhul.
 Console.WriteLine(0);               // sulgudele järgneb, loogeliste sulgude vahel ole koodiplokk ()
                                    // töötlustegevus tsükli sees, on muutuja "k" hetkearvu väljakuvamine.
+//using System.Runtime.ExceptionServices;
+
+//Console.WriteLine("For tsükle");
+//int kogus = 666;
+
+//for (int i = 0; i < kogus; i++)
+//{
+//    Console.WriteLine("o((>u< )) o");
+//    Console.Beep();
+//}
+
+//string[] objectArray  = new string[5]; //array, massiv mitmest elemendist
+//int objectCount  = 0; // loend kuyi palju kordi küsida 
+//string temp = "no name"; //muutuja mis hetkel on "tühi"
+//while (objectCount < 5)
+//{ 
+//    Console.WriteLine("Sisesta järgmine lemmiklooma nimi");
+//temp=Console.ReadLine();
+//    objectArray[objectCount] = temp;
+//    objectCount++;
+//}
+//Console.WriteLine("Oled sisestanud järgnevad loomanimed");
+//for (int i = 0; i < objectArray.Length; i++)
+//{
+//    Console.WriteLine($"{i+1}. loomani on: {objectArray[i]}");
+//}
+
+
+string[] monster = { "MrSketelt", "Frankenstein", "i mayk vozovski" };
+Console.WriteLine(monster[0]);
